@@ -128,7 +128,7 @@ def _ParseInstrumentationFinishedBundle(result):
     elif last_tag == 'INSTRUMENTATION_RESULT':
       result_dict[key] += '\n' + line
 
-  if not result_dict.has_key('code'):
+  if not 'code' in result_dict:
     result_dict['code'] = '0'
     result_dict['shortMsg'] = "No result returned from instrumentation"
 
